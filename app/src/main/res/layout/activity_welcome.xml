@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".WelcomeActivity">
+
+    <!-- Header Banner -->
+    <ImageView
+        android:id="@+id/ivWelcomeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome_header"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- GMI Logo -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/gmi_logo"
+        app:layout_constraintTop_toBottomOf="@id/ivWelcomeHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to GMI Prospect App"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/navyBlue"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Your pathway to academic success starts here"
+        android:textSize="14sp"
+        android:textColor="@color/navyBlue"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Programme Buttons -->
+    <LinearLayout
+        android:id="@+id/llProgramButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeSubtitle"
+        app:layout_constraintBottom_toTopOf="@+id/llFooter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiploma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diploma Programme"
+            style="@style/ModernButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GAPP Programme"
+            android:layout_marginTop="8dp"
+            style="@style/ModernButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGufp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GUFP Programme"
+            android:layout_marginTop="8dp"
+            style="@style/ModernButton" />
+    </LinearLayout>
+
+    <!-- Footer with Action Buttons and Contact Info -->
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            style="@style/ModernButton"
+            app:icon="@drawable/ic_play_arrow"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enquiry"
+            style="@style/ModernButton"
+            app:icon="@drawable/ic_help"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvContactInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📞 +603-8921 9000 / 9191 / 9046 / 9322\n📠 +603-8921 9001\n✉️ marketing@gmi.edu.my"
+            android:textSize="12sp"
+            android:textColor="@color/navyBlue"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

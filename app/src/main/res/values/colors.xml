@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navyBlue">#0D47A1</color>
+    <color name="lightBlue">#E3F2FD</color>
+    <color name="mediumBlue">#2196F3</color>
+    <color name="red">#D32F2F</color>
+    <color name="lightRed">#FFCDD2</color>
+    <color name="card_blue_bg">#F5F9FF</color>
+    <color name="border_blue">#BBDEFB</color>
+</resources>
